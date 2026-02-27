@@ -1,0 +1,46 @@
+{
+  "name": "beautiful-mermaid-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for rendering Mermaid diagrams as beautiful SVGs or ASCII art",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "beautiful-mermaid-mcp-server": "dist/index.js"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "mermaid",
+    "diagram",
+    "svg",
+    "ascii",
+    "model-context-protocol"
+  ],
+  "author": "mingway426",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mingway426/beautiful-mermaid.git",
+    "directory": "mcp-server"
+  },
+  "homepage": "https://github.com/mingway426/beautiful-mermaid/tree/main/mcp-server#readme",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "beautiful-mermaid": "^1.1.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
